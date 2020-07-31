@@ -84,7 +84,7 @@
   become: yes
   become_user: isucon
   git:
-    repo: https://github.com/nakario/braintwist
+    repo: https://github.com/nakario/braintwist.git
     dest: /home/isucon/braintwist
     version: master
     accept_hostkey: yes
