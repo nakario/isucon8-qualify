@@ -83,10 +83,7 @@
 - name: Install xbuild
   become: yes
   become_user: isucon
-  git:
-    repo: https://github.com/tagomoris/xbuild.git
-    dest: /home/isucon/xbuild
-    version: master
+  shell: "git clone https://github.com/tagomoris/xbuild.git /home/isucon/xbuild"
 
 - name: mkdir /home/isucon/local for xbuild
   become: yes
