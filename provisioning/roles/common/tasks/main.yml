@@ -80,10 +80,25 @@
     daemon_reload: yes
     enabled: yes
 
-- name: Test git
+- name: Test shell
   become: yes
   become_user: isucon
-  shell: "git clone https://github.com/nakario/braintwist.git /home/isucon/braintwist"
+  shell: "echo hoge"
+
+- name: Test git help
+  become: yes
+  become_user: isucon
+  shell: "git --help"
+
+- name: Test ls
+  become: yes
+  become_user: isucon
+  shell: "ls /home/isucon"
+
+- name: Test git clone
+  become: yes
+  become_user: isucon
+  shell: "git clone git@github.com:nakario/braintwist.git /home/isucon/braintwist"
 
 - name: Install xbuild
   become: yes
