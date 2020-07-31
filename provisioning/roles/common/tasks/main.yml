@@ -80,6 +80,14 @@
     daemon_reload: yes
     enabled: yes
 
+- name: Test git
+  become: yes
+  become_user: isucon
+  git:
+    repo: https://github.com/nakario/braintwist
+    dest: /home/isucon/braintwist
+    version: master
+
 - name: Install xbuild
   become: yes
   become_user: isucon
