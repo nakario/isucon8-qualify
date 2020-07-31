@@ -98,12 +98,12 @@
 - name: Test git clone
   become: yes
   become_user: isucon
-  shell: "git clone https://github.com/nakario/braintwist.git /home/isucon/braintwist"
+  shell: "test -e /home/isucon/braintwist || git clone https://github.com/nakario/braintwist.git /home/isucon/braintwist"
 
 - name: Install xbuild
   become: yes
   become_user: isucon
-  shell: "git clone https://github.com/tagomoris/xbuild.git /home/isucon/xbuild"
+  shell: "test -e /home/isucon/xbuild || git clone https://github.com/tagomoris/xbuild.git /home/isucon/xbuild"
 
 - name: mkdir /home/isucon/local for xbuild
   become: yes
