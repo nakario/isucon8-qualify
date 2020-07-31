@@ -87,6 +87,7 @@
     repo: https://github.com/nakario/braintwist
     dest: /home/isucon/braintwist
     version: master
+    accept_hostkey: yes
 
 - name: Install xbuild
   become: yes
