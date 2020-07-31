@@ -84,7 +84,7 @@
   become: yes
   become_user: isucon
   git:
-    repo: https://github.com/nakario/braintwist.git
+    repo: git@github.com:nakario/braintwist.git
     dest: /home/isucon/braintwist
     version: master
     accept_hostkey: yes
@@ -93,7 +93,7 @@
   become: yes
   become_user: isucon
   git:
-    repo: https://github.com/tagomoris/xbuild.git
+    repo: git@github.com:tagomoris/xbuild.git
     dest: /home/isucon/xbuild
     version: master
 
